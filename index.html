@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Transitions Homework</title>
+    <link rel="stylesheet" href="shailyro.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="shailyro.js" defer></script>
+</head>
+<body>
+    <h1>Homework #3: D3 Transitions</h1>
+    <p>Shaily Roy (shailyro@asu.edu)</p>
+
+    <div id="control-panel">
+        <label for="dataset-select">Dataset:</label>
+        <select id="dataset-select">
+            <option value="/data/penguins_cleaned.csv">Penguins</option>
+            <option value="/data/Pokemon.csv">Pokemon</option>
+            <option value="/testing/data/Test1.csv">Test1</option>
+            <option value="/testing/data/Test2.csv">Test2</option>
+        </select>
+
+        <label for="x-attribute-select">X Attribute:</label>
+        <select id="x-attribute-select"></select>
+
+        <label for="y-attribute-select">Y Attribute:</label>
+        <select id="y-attribute-select"></select>
+
+        <label for="color-select">Color:</label>
+        <select id="color-select"></select>
+
+        <label for="boxplot-attribute-select">Boxplot:</label>
+        <select id="boxplot-attribute-select"></select>
+    </div>
+
+    <div id="visualization-container" style="display: flex;">
+        <div id="scatter-plot-panel" class="plot-panel"></div>
+        <div id="box-plot-panel" class="plot-panel"></div>
+       
+    </div>
+    
+    <!-- Centered Toggle Button Below the Plots -->
+    <div id="button-container">
+        <button id="toggle-plot-type">Toggle Box/Violin Plot</button>
+    </div>
+    
+</body>
+</html>

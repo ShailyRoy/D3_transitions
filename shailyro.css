@@ -1,0 +1,188 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Control Panel Styling */
+#control-panel {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#control-panel label {
+    font-size: 14px;
+    color: #555;
+}
+
+#control-panel select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#control-panel select:hover {
+    border-color: #888;
+}
+
+/* Plot Panel Styling */
+.plot-panel {
+    flex: 1;
+    max-width: 1000px;
+    height: 450px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px;
+}
+
+/* SVG Styling */
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Visualization Container Styling */
+#visualization-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .plot-panel {
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #visualization-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plot-panel {
+        width: 100%;
+        height: 300px;
+    }
+
+    #control-panel {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+}
+
+/* Styling for Interactivity */
+circle {
+    transition: fill 0.3s, stroke-width 0.3s;
+}
+
+circle:hover {
+    fill: orange;
+    stroke-width: 2;
+}
+
+/* Axis Styling */
+.axis text {
+    font-size: 12px;
+    fill: #333;
+}
+
+.axis path,
+.axis line {
+    stroke: #ccc;
+}
+
+/* Box Plot Styling */
+/* .box {
+    /* fill: #69b3a2;
+    opacity: 0.7; */
+/*} */
+
+.median-line {
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.whisker-line {
+    stroke: #444;
+    stroke-width: 1.5;
+}
+
+.whisker-cap {
+    stroke: #444;
+    stroke-width: 1.5;
+}
+
+/* Lasso styling */
+.lasso {
+    stroke: dodgerblue;
+    stroke-width: 2px;
+    fill: rgba(30, 144, 255, 0.3);
+    stroke-dasharray: 4;
+}
+
+/* Styling for selected points */
+.selected {
+    stroke: orange;
+    stroke-width: 2px;
+    fill-opacity: 1;
+}
+
+/* Styling for unselected points */
+.unselected {
+    fill-opacity: 0.5;
+}
+#plot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the plots */
+}
+
+#scatter-plot-panel, #box-plot-panel, #circle-plot-panel {
+    width: 680px; /* Adjust width as needed */
+    margin: 0 auto; /* Center-align within the plot container */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space above the button */
+}
+
+#toggle-plot-type {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
